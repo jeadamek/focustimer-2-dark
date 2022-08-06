@@ -1,0 +1,232 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --elements-light: #323238;
+  --active-color: #ffffff;
+  --bg-card-light: #E1E1E6;
+  --bg-card-active-light: #02799D;
+
+  --bg-dark: #121214;
+  --elements-dark: #C4C4CC;
+  --bg-card-dark:#29292E;
+  --bg-card-active-dark: #0A3442;
+  
+  font-size: 62.5%;
+}
+
+body{
+  color: var(--elements-light);
+
+  font-family: 'Roboto', sans-serif;
+  
+  display: grid;
+  grid-auto-rows: min-content;
+
+  min-height: 100vh;
+}
+
+header{
+  align-self: end;
+  justify-self: end;
+
+  padding: 3rem 2rem 5rem 0;
+}
+
+header button{
+  width: 5rem;
+  height: 5rem;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  gap: 5rem;
+
+  margin: 0 auto 6.4rem;
+  width: 30rem;
+}
+
+#timer{
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 14.8rem;
+
+  display: flex;
+  margin-bottom: 1.8rem;
+}
+
+#controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.play svg path,
+.pause svg path,
+.stop svg path,
+.add-minute svg path,
+.remove-minute svg path,
+.forest svg path,
+.rain svg path,
+.coffee-shop svg path,
+.fireplace svg path{
+  fill: var(--elements-light);
+}
+
+.hide{
+  display: none;
+}
+
+#sounds{
+  display: grid;
+  gap: 2.5rem;
+
+  grid-template-areas: "A B" "C D";
+}
+
+#forest{
+  grid-area: A;
+}
+
+#rain{
+  grid-area: B;
+}
+
+#coffee-shop{
+  grid-area: C;
+}
+
+#fireplace{
+  grid-area: D;
+}
+
+.card{
+  background-color: var(--bg-card-light);
+
+  height: 15.2rem;
+  width: 13.8rem;
+
+  padding: 2.4rem 0;
+
+  border-radius: 24px;
+}
+
+.card:hover{
+  background-color: #d7d7dc;
+}
+
+.active{
+  background: var(--bg-card-active-light);
+}
+
+.active svg path{
+  fill: var(--active-color);
+}
+
+.active:hover{
+  background: var(--bg-card-active-light);
+}
+
+
+/* ============================== SLIDER ============================== */
+
+.slider input[type="range"]{
+  width: 9rem;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  margin-top: 3.2rem;
+  height: 4px;
+  border-radius: 5px;
+
+  background: var(--elements-light);
+}
+
+.slider input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: none;
+  background: var(--elements-light);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 20px;
+}
+
+.active .slider input[type="range"],
+.dark .slider input[type="range"]{
+  background: var(--active-color);
+}
+
+.active .slider input[type=range]::-webkit-slider-thumb,
+.dark .slider input[type=range]::-webkit-slider-thumb{
+  background: var(--active-color);
+}
+
+
+/* ============================== DARK MODE ============================== */
+
+.dark{
+  background-color: var(--bg-dark);
+  color: var(--active-color);
+}
+
+.dark main svg path{
+  fill: var(--elements-dark)
+}
+
+.dark .card{
+  background-color: var(--bg-card-dark);
+}
+
+.dark .active{
+  background: var(--bg-card-active-dark);
+}
+
+.dark .active svg path{
+  fill: var(--active-color);
+}
+
+
+/* ============================== MEDIA QUERIES ============================== */
+
+@media (min-width:500px){
+  header{
+    padding: 6.4rem 6.4rem 9.6rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  main{   
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 82rem;
+  }
+
+  #timer{
+    font-size: 13rem;
+  }
+
+  #sounds{
+    gap: 4rem;
+  }
+}
