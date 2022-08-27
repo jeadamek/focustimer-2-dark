@@ -29,13 +29,15 @@ export default function Controls({
   function activeLightMode(){
     buttonLightMode.classList.remove('hide')
     buttonDarkMode.classList.add('hide')
-    documentBody.classList.remove('dark')
+    documentBody.classList.add('light-theme')
+    documentBody.classList.remove('dark-theme')
   }
 
   function activeDarkMode(){
     buttonDarkMode.classList.remove('hide')
     buttonLightMode.classList.add('hide')
-    documentBody.classList.add('dark')
+    documentBody.classList.add('dark-theme')
+    documentBody.classList.remove('light-theme')
   }
 
   function forestActive(){
