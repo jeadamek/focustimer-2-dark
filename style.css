@@ -5,21 +5,33 @@
 }
 
 :root{
-  --elements-light: #323238;
   --active-color: #ffffff;
-  --bg-card-light: #E1E1E6;
-  --bg-card-active-light: #02799D;
-
-  --bg-dark: #121214;
-  --elements-dark: #C4C4CC;
-  --bg-card-dark:#29292E;
-  --bg-card-active-dark: #0A3442;
   
   font-size: 62.5%;
 }
 
+.light-theme {
+  --bg-color: #ffffff;
+  --tt-color: #323238;
+  --elements-color: #323238;
+  --bg-card: #E1E1E6;
+  --bg-card-hover: #d7d7dc;
+  --bg-card-active: #02799D;
+}
+
+
+.dark-theme {
+  --bg-color: #121214;
+  --tt-color: #ffffff;
+  --elements-color: #C4C4CC;  
+  --bg-card:#29292E;
+  --bg-card-hover: #1f1f23;
+  --bg-card-active: #0A3442;
+}
+
 body{
-  color: var(--elements-light);
+  background-color: var(--bg-color);
+  color: var(--tt-color);
 
   font-family: 'Roboto', sans-serif;
   
@@ -80,11 +92,11 @@ button{
 .stop svg path,
 .add-minute svg path,
 .remove-minute svg path,
-.forest svg path,
-.rain svg path,
-.coffee-shop svg path,
-.fireplace svg path{
-  fill: var(--elements-light);
+#forest svg path,
+#rain svg path,
+#coffee-shop svg path,
+#fireplace svg path{
+  fill: var(--elements-color);
 }
 
 .hide{
@@ -115,7 +127,7 @@ button{
 }
 
 .card{
-  background-color: var(--bg-card-light);
+  background-color: var(--bg-card);
 
   height: 15.2rem;
   width: 13.8rem;
@@ -126,19 +138,19 @@ button{
 }
 
 .card:hover{
-  background-color: #d7d7dc;
+  background-color: var(--bg-card-hover);
 }
 
 .active{
-  background: var(--bg-card-active-light);
+  background: var(--bg-card-active);
 }
 
 .active svg path{
-  fill: var(--active-color);
+  fill: var(--active-color) !important;
 }
 
 .active:hover{
-  background: var(--bg-card-active-light);
+  background: var(--bg-card-active);
 }
 
 
@@ -157,14 +169,14 @@ button{
   height: 4px;
   border-radius: 5px;
 
-  background: var(--elements-light);
+  background: var(--elements-color);
 }
 
 .slider input[type=range]::-webkit-slider-thumb{
   -webkit-appearance: none;
   border: none;
   box-shadow: none;
-  background: var(--elements-light);
+  background: var(--elements-color);
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 20px;
@@ -179,31 +191,6 @@ button{
 .dark .slider input[type=range]::-webkit-slider-thumb{
   background: var(--active-color);
 }
-
-
-/* ============================== DARK MODE ============================== */
-
-.dark{
-  background-color: var(--bg-dark);
-  color: var(--active-color);
-}
-
-.dark main svg path{
-  fill: var(--elements-dark)
-}
-
-.dark .card{
-  background-color: var(--bg-card-dark);
-}
-
-.dark .active{
-  background: var(--bg-card-active-dark);
-}
-
-.dark .active svg path{
-  fill: var(--active-color);
-}
-
 
 /* ============================== MEDIA QUERIES ============================== */
 
