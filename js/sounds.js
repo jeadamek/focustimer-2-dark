@@ -16,6 +16,9 @@ export default function(){
   coffeeShopAudio.volume = 0.5
   fireplaceAudio.volume = 0.5
   
+  buttonPressAudio.volume = 0.5
+  kitchenTimer.volume = 0.5
+  
   function resetAudio(){
     forestAudio.pause()
     rainAudio.pause()
