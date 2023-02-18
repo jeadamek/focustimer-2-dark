@@ -18,7 +18,7 @@
 This is a project developed on Stage 5 in the Explorer course at the [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course's projects [click on this link](https://github.com/jeadamek/explorer-rocketseat). 
 
 
-The project, the main goal to build a complete page with a Pomodoro-style countdown with HTML, Javascript and CSS, responsiveness and programming language were applied. Change to light or dark theme, audio cards, functions callbacks, Clean Code, dependency injection and factory pattern.
+The project’s  main goal was to build a complete page with a Pomodoro-style countdown with HTML, Javascript, CSS, responsiveness and programming language were applied. Change to light or dark theme, audio cards, functions callbacks, Clean Code, dependency injection and factory pattern.
 
 
 ### I could practice and study:
